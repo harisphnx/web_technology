@@ -1,0 +1,73 @@
+firefox1/nsprpub/config/nsinstall.c:		 readlink(toname, buf, sizeof buf) != len ||
+firefox1/nsprpub/config/nfspwd.pl:      && readlink("/u/$user") eq "/usr/people/$user") {
+Binary file firefox1/.hg/dirstate matches
+Binary file firefox1/.hg/store/data/toolkit/crashreporter/google-breakpad/src/client/solaris/handler/minidump__generator.cc.i matches
+Binary file firefox1/.hg/store/data/security/sandbox/linux/seccomp__filter.h.i matches
+Binary file firefox1/.hg/store/undo matches
+firefox1/.hg/store/fncache:data/toolkit/crashreporter/google-breakpad/src/common/linux/safe_readlink.h.i
+firefox1/.hg/store/fncache:data/toolkit/crashreporter/google-breakpad/src/common/linux/safe_readlink.cc.i
+firefox1/.hg/store/fncache:data/toolkit/crashreporter/google-breakpad/src/common/linux/safe_readlink_unittest.cc.i
+firefox1/toolkit/mozapps/update/updater/updater.cpp:  int rv = readlink(path, target, MAXPATHLEN);
+firefox1/toolkit/crashreporter/google-breakpad/Makefile.am:	src/common/linux/safe_readlink.cc
+firefox1/toolkit/crashreporter/google-breakpad/Makefile.am:	src/common/linux/safe_readlink.o \
+firefox1/toolkit/crashreporter/google-breakpad/Makefile.am:	src/common/linux/safe_readlink.cc \
+firefox1/toolkit/crashreporter/google-breakpad/Makefile.am:	src/common/linux/safe_readlink.cc \
+firefox1/toolkit/crashreporter/google-breakpad/Makefile.am:	src/common/linux/safe_readlink_unittest.cc \
+firefox1/toolkit/crashreporter/google-breakpad/android/google_breakpad/Android.mk:    src/common/linux/safe_readlink.cc
+firefox1/toolkit/crashreporter/google-breakpad/src/third_party/lss/linux_syscall_support.h:  LSS_INLINE _syscall3(int,     readlink,        const char*, p,
+firefox1/toolkit/crashreporter/google-breakpad/src/client/linux/crash_generation/crash_generation_server.cc:#include "common/linux/safe_readlink.h"
+firefox1/toolkit/crashreporter/google-breakpad/src/client/linux/minidump_writer/minidump_writer_unittest_utils.cc:#include "common/linux/safe_readlink.h"
+firefox1/toolkit/crashreporter/google-breakpad/src/client/linux/minidump_writer/minidump_writer_unittest.cc:#include "common/linux/safe_readlink.h"
+firefox1/toolkit/crashreporter/google-breakpad/src/client/linux/minidump_writer/linux_ptrace_dumper_unittest.cc:#include "common/linux/safe_readlink.h"
+firefox1/toolkit/crashreporter/google-breakpad/src/client/linux/minidump_writer/linux_dumper.cc:#include "common/linux/safe_readlink.h"
+firefox1/toolkit/crashreporter/google-breakpad/src/client/solaris/handler/minidump_generator.cc:  if ((count = readlink(path, buf, PATH_MAX - 1)) < 0)
+firefox1/toolkit/crashreporter/google-breakpad/src/common/linux/safe_readlink.h:// safe_readlink.h: Define the google_breakpad::SafeReadLink function,
+firefox1/toolkit/crashreporter/google-breakpad/src/common/linux/safe_readlink.h:// which wraps sys_readlink and gurantees the result is NULL-terminated.
+firefox1/toolkit/crashreporter/google-breakpad/src/common/linux/safe_readlink.h:// This function wraps sys_readlink() and performs the same functionalty,
+firefox1/toolkit/crashreporter/google-breakpad/src/common/linux/safe_readlink.h:// but guarantees |buffer| is NULL-terminated if sys_readlink() returns
+firefox1/toolkit/crashreporter/google-breakpad/src/common/linux/safe_readlink.h:// no error. It takes the same arguments as sys_readlink(), but unlike
+firefox1/toolkit/crashreporter/google-breakpad/src/common/linux/safe_readlink.h:// sys_readlink(), it returns true on success.
+firefox1/toolkit/crashreporter/google-breakpad/src/common/linux/safe_readlink.h:// The implementation of this function calls sys_readlink() instead of
+firefox1/toolkit/crashreporter/google-breakpad/src/common/linux/safe_readlink.h:// readlink(), it can thus be used in the context where calling to libc
+firefox1/toolkit/crashreporter/google-breakpad/src/common/linux/safe_readlink.cc:// safe_readlink.cc: Implement google_breakpad::SafeReadLink.
+firefox1/toolkit/crashreporter/google-breakpad/src/common/linux/safe_readlink.cc:// See safe_readlink.h for details.
+firefox1/toolkit/crashreporter/google-breakpad/src/common/linux/safe_readlink.cc:  // sys_readlink() does not add a NULL byte to |buffer|. In order to return
+firefox1/toolkit/crashreporter/google-breakpad/src/common/linux/safe_readlink.cc:  // one byte longer than the expected path length. Also, sys_readlink()
+firefox1/toolkit/crashreporter/google-breakpad/src/common/linux/safe_readlink.cc:  ssize_t result_size = sys_readlink(path, buffer, buffer_size);
+firefox1/toolkit/crashreporter/google-breakpad/src/common/linux/file_id_unittest.cc:#include "common/linux/safe_readlink.h"
+firefox1/toolkit/crashreporter/google-breakpad/src/common/linux/safe_readlink_unittest.cc:// safe_readlink_unittest.cc: Unit tests for google_breakpad::SafeReadLink.
+firefox1/toolkit/crashreporter/google-breakpad/src/common/linux/safe_readlink_unittest.cc:#include "common/linux/safe_readlink.h"
+firefox1/toolkit/crashreporter/google-breakpad/src/common/linux/moz.build:    'safe_readlink.cc',
+firefox1/toolkit/crashreporter/breakpad-patches/12-bug863475.patch: 	src/common/linux/safe_readlink.cc \
+firefox1/toolkit/crashreporter/breakpad-patches/03-unique-string.patch: 	src/common/linux/safe_readlink.cc \
+firefox1/security/nss/coreconf/nsinstall/nsinstall.c:		 readlink(toname, buf, sizeof buf) != len ||
+firefox1/security/nss/coreconf/nsinstall/sunos4.h:extern int readlink(const char *, char *, int);
+firefox1/security/nss/coreconf/nsinstall/pathsub.c:	    rv = readlink(myPath, buf, sizeof(buf) - 1);
+firefox1/security/nss/coreconf/nsinstall/pathsub.c:	    	perror("readlink");
+firefox1/security/nss/lib/softoken/lgglue.c:	ret = readlink(source, resolved, len-1);
+firefox1/security/nss/lib/util/secload.c:            ( (retlen = readlink(input, resolved, len - 1)) > 0) ) {
+firefox1/security/nss/lib/freebl/genload.c:            ( (retlen = readlink(input, resolved, len - 1)) > 0) ) {
+firefox1/security/nss/cmd/shlibsign/shlibsign.c:        ret = readlink(input_file, link_buf, sizeof(link_buf) - 1);
+firefox1/security/sandbox/linux/x86_64_linux_syscalls.h:#if !defined(__NR_readlink)
+firefox1/security/sandbox/linux/x86_64_linux_syscalls.h:#define __NR_readlink 89
+firefox1/security/sandbox/linux/x86_64_linux_syscalls.h:#if !defined(__NR_readlinkat)
+firefox1/security/sandbox/linux/x86_64_linux_syscalls.h:#define __NR_readlinkat 267
+firefox1/security/sandbox/linux/x86_32_linux_syscalls.h:#if !defined(__NR_readlink)
+firefox1/security/sandbox/linux/x86_32_linux_syscalls.h:#define __NR_readlink 85
+firefox1/security/sandbox/linux/x86_32_linux_syscalls.h:#if !defined(__NR_readlinkat)
+firefox1/security/sandbox/linux/x86_32_linux_syscalls.h:#define __NR_readlinkat 305
+firefox1/security/sandbox/linux/SandboxFilter.cpp:  Allow(SYSCALL(readlink)); /* Workaround for bug 964455 */
+firefox1/security/sandbox/linux/SandboxFilter.cpp:  Allow(SYSCALL(readlink));
+firefox1/security/sandbox/linux/arm_linux_syscalls.h:#if !defined(__NR_readlink)
+firefox1/security/sandbox/linux/arm_linux_syscalls.h:#define __NR_readlink (__NR_SYSCALL_BASE+85)
+firefox1/security/sandbox/linux/arm_linux_syscalls.h:#if !defined(__NR_readlinkat)
+firefox1/security/sandbox/linux/arm_linux_syscalls.h:#define __NR_readlinkat (__NR_SYSCALL_BASE+332)
+firefox1/media/webrtc/trunk/build/update-linux-sandbox.sh:CHROME_SRC_DIR="${CHROME_SRC_DIR:-$(dirname -- $(readlink -fn -- "$0"))/..}"
+firefox1/media/webrtc/trunk/build/linux/python_arch.sh:python=$(readlink -f "$1")
+firefox1/media/webrtc/trunk/build/linux/dump_app_syms:SCRIPTDIR="$(readlink -f "$(dirname "$0")")"
+firefox1/media/webrtc/trunk/build/android/envsetup_functions.sh:  # The set of GYP_DEFINES to pass to gyp. Use 'readlink -e' on directories
+firefox1/media/webrtc/trunk/build/android/envsetup.sh:CURRENT_DIR="$(readlink -f "$(dirname $BASH_SOURCE)/../../")"
+firefox1/media/webrtc/trunk/build/mac/copy_framework_unversioned.sh:CURRENT_VERSION_ID="$(readlink "${VERSIONS}/Current")"
+firefox1/media/webrtc/trunk/build/install-chroot.sh:d="$(readlink -f "${HOME}/chroot" 2>/dev/null || echo "${HOME}/chroot")"
+firefox1/media/webrtc/trunk/build/install-chroot.sh:script="$(dirname $(readlink -f "$0"))/install-build-deps.sh"
+firefox1/media/webrtc/trunk/tools/gyp/py
